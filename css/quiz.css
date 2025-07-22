@@ -1,0 +1,161 @@
+body {
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.quiz-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 400px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+#start-screen {
+  text-align: center;
+}
+
+#start-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #45a049;
+}
+
+.quiz-header h2#timer {
+  text-align: right;
+  color: #666;
+  margin: 0 0 10px;
+  font-weight: normal;
+}
+
+.quiz-header h2#question {
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: block;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #2196F3;
+  border-color: #2196F3;
+  color: white;
+}
+
+label.correct {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white !important;
+}
+
+label.wrong {
+  background-color: #f44336 !important;
+  border-color: #f44336 !important;
+  color: white !important;
+}
+
+label.greyed {
+  background-color: #ccc !important;
+  border-color: #ccc !important;
+  color: #666 !important;
+}
+
+button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  margin: 0 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#progress-bar .bar {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+#progress-bar span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+.indicator {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      margin: 0 4px;
+      border-radius: 50%;
+      background-color: #ccc;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .indicator.correct {
+      background-color: green;
+    }
+    .indicator.wrong {
+      background-color: red;
+    }
+    .indicator.missed {
+      background-color: #666;
+    }
